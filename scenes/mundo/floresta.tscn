@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcbwxjxekca4r"]
+[gd_scene load_steps=16 format=3 uid="uid://bcbwxjxekca4r"]
 
 [ext_resource type="Texture2D" uid="uid://fq8mbrweukw3" path="res://assets/sprites/biomas/Florest/arvore1.png" id="1_plv8h"]
 [ext_resource type="Texture2D" uid="uid://blruori7gu6ei" path="res://assets/sprites/biomas/Florest/Small Rocksss.png" id="1_q5f6t"]
@@ -16,6 +16,18 @@ albedo_color = Color(0.219608, 0.321569, 0.145098, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_plv8h"]
 material = SubResource("StandardMaterial3D_61iti")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_irokx"]
+size = Vector3(1.48071, 1, 0.355835)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3sq3g"]
+size = Vector3(0.322266, 0.14325, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w1eiu"]
+size = Vector3(0.312561, 0.219971, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cq315"]
+size = Vector3(1, 0.442383, 1)
+
 [node name="floresta" type="Node3D"]
 
 [node name="chao" type="MeshInstance3D" parent="."]
@@ -29,10 +41,18 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.446973, 0.0687642, 0.014231
 billboard = 1
 texture = ExtResource("1_q5f6t")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedras/pedra1"]
+transform = Transform3D(0.0913376, 0, 0, 0, 0.0913376, 0, 0, 0, 0.0913376, 0.00460479, 0, -0.0050675)
+shape = SubResource("BoxShape3D_irokx")
+
 [node name="pedra2" type="Sprite3D" parent="pedras"]
 transform = Transform3D(1.18549, 0, 0, 0, 1.11334, 0, 0, 0, 2, -0.648681, 0.0859755, 0.00808668)
 billboard = 1
 texture = ExtResource("2_q5f6t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pedras/pedra2"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.0475741, 0.00131834, -0.0177704, 0)
+shape = SubResource("BoxShape3D_3sq3g")
 
 [node name="arvores" type="Node3D" parent="."]
 
@@ -41,10 +61,18 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.401429, 0)
 billboard = 1
 texture = ExtResource("1_plv8h")
 
+[node name="CollisionShape3D" type="CollisionShape3D" parent="arvores/arvore1"]
+transform = Transform3D(0.166657, 0, 0, 0, 0.490026, 0, 0, 0, 0.0215332, -0.0141441, -0.152236, 0)
+shape = SubResource("BoxShape3D_w1eiu")
+
 [node name="arvore2" type="Sprite3D" parent="arvores"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.23665, 0.304876, 0)
 billboard = 1
 texture = ExtResource("2_0vtsg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="arvores/arvore2"]
+transform = Transform3D(0.142921, 0, 0, 0, 1, 0, 0, 0, 0.0450981, 0, -0.278809, 0)
+shape = SubResource("BoxShape3D_cq315")
 
 [node name="moitas" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47741, 0, 0)

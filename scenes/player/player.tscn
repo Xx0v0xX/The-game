@@ -407,6 +407,7 @@ script = ExtResource("1_8afob")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Player"]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0.335728, -1.51126, -2.37735)
+billboard = 1
 sprite_frames = SubResource("SpriteFrames_8afob")
 animation = &"idle_frente"
 frame_progress = 0.814281
