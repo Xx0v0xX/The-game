@@ -11,20 +11,25 @@ config_version=5
 [application]
 
 config/name="The game"
+run/main_scene="uid://d2cj0db67tmft"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://assets/sprites/icon.svg"
 
 [file_customization]
 
 folder_colors={
+"res://UI/": "green",
 "res://assets/": "red",
+"res://assets/sprites/biomas/Florest/": "green",
+"res://assets/sprites/biomas/deserto/": "orange",
+"res://assets/sprites/biomas/geleira/": "gray",
 "res://scenes/": "orange",
 "res://scripts/": "yellow",
-"res://ui/": "green",
 "res://world/": "teal"
 }
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
+textures/canvas_textures/default_texture_repeat=2
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

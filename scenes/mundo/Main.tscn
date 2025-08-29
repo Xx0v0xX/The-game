@@ -1,3 +1,35 @@
-[gd_scene format=3 uid="uid://d2cj0db67tmft"]
+[gd_scene load_steps=7 format=3 uid="uid://d2cj0db67tmft"]
+
+[ext_resource type="PackedScene" uid="uid://dplkrvyj54ynr" path="res://scenes/player/player.tscn" id="1_py2m1"]
+[ext_resource type="PackedScene" uid="uid://c17qbk5gvd4bi" path="res://scenes/mundo/UI.tscn" id="2_y3p85"]
+[ext_resource type="Texture2D" uid="uid://bvyn6gowbaw57" path="res://UI/HUD/heart_.png" id="3_wslim"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_py2m1"]
+
+[sub_resource type="Sky" id="Sky_y3p85"]
+sky_material = SubResource("ProceduralSkyMaterial_py2m1")
+
+[sub_resource type="Environment" id="Environment_wslim"]
+background_mode = 2
+sky = SubResource("Sky_y3p85")
 
 [node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wslim")
+
+[node name="Player" parent="." instance=ExtResource("1_py2m1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21124, 0, 0)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Control" parent="UI" instance=ExtResource("2_y3p85")]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="UI"]
+offset_left = 1.0
+offset_right = 18.0
+offset_bottom = 17.0
+scale = Vector2(3.7267, 3.8762)
+value = 100.0
+fill_mode = 1
+texture_over = ExtResource("3_wslim")

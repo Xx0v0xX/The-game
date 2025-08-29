@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://bcbwxjxekca4r"]
+
+[ext_resource type="Texture2D" uid="uid://fq8mbrweukw3" path="res://assets/sprites/biomas/Florest/arvore1.png" id="1_plv8h"]
+[ext_resource type="Texture2D" uid="uid://blruori7gu6ei" path="res://assets/sprites/biomas/Florest/Small Rocksss.png" id="1_q5f6t"]
+[ext_resource type="Texture2D" uid="uid://ip2q0r8qi7oi" path="res://assets/sprites/biomas/Florest/arvore2.png" id="2_0vtsg"]
+[ext_resource type="Texture2D" uid="uid://5677t6cctgy2" path="res://assets/sprites/biomas/Florest/Big Rock.png" id="2_q5f6t"]
+[ext_resource type="Texture2D" uid="uid://e231uwb8gmn2" path="res://assets/sprites/biomas/Florest/Bush_florest.png" id="5_055m5"]
+[ext_resource type="Texture2D" uid="uid://bfwmr5f34wlwv" path="res://assets/sprites/biomas/Florest/Bush_mini_florest.png" id="6_s7gsh"]
+[ext_resource type="Texture2D" uid="uid://wgrvh2x2175e" path="res://assets/sprites/biomas/Florest/Grass.png" id="7_irokx"]
+[ext_resource type="Texture2D" uid="uid://baihhl25618rr" path="res://assets/sprites/biomas/Florest/Grass_mid.png" id="8_3sq3g"]
+[ext_resource type="Texture2D" uid="uid://3xo5pe6fgw6f" path="res://assets/sprites/biomas/Florest/Grass_mini.png" id="9_w1eiu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61iti"]
+albedo_color = Color(0.219608, 0.321569, 0.145098, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_plv8h"]
+material = SubResource("StandardMaterial3D_61iti")
+
+[node name="floresta" type="Node3D"]
+
+[node name="chao" type="MeshInstance3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("PlaneMesh_plv8h")
+
+[node name="pedras" type="Node3D" parent="."]
+
+[node name="pedra1" type="Sprite3D" parent="pedras"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.446973, 0.0687642, 0.0142313)
+billboard = 1
+texture = ExtResource("1_q5f6t")
+
+[node name="pedra2" type="Sprite3D" parent="pedras"]
+transform = Transform3D(1.18549, 0, 0, 0, 1.11334, 0, 0, 0, 2, -0.648681, 0.0859755, 0.00808668)
+billboard = 1
+texture = ExtResource("2_q5f6t")
+
+[node name="arvores" type="Node3D" parent="."]
+
+[node name="arvore1" type="Sprite3D" parent="arvores"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.401429, 0)
+billboard = 1
+texture = ExtResource("1_plv8h")
+
+[node name="arvore2" type="Sprite3D" parent="arvores"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.23665, 0.304876, 0)
+billboard = 1
+texture = ExtResource("2_0vtsg")
+
+[node name="moitas" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.47741, 0, 0)
+
+[node name="moita1" type="Sprite3D" parent="moitas"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.137581, 0.0845941, 0.00346065)
+billboard = 1
+texture = ExtResource("5_055m5")
+
+[node name="moita2" type="Sprite3D" parent="moitas"]
+transform = Transform3D(1.18549, 0, 0, 0, 1.11334, 0, 0, 0, 2, -0.529838, 0.0493593, 0.00567985)
+billboard = 1
+texture = ExtResource("6_s7gsh")
+
+[node name="grama" type="Node3D" parent="."]
+
+[node name="grama1" type="Sprite3D" parent="grama"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1979, 0.0316613, -0.00910449)
+billboard = 1
+texture = ExtResource("7_irokx")
+
+[node name="grama2" type="Sprite3D" parent="grama"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.45455, 0.0291819, -0.00257456)
+billboard = 1
+texture = ExtResource("8_3sq3g")
+
+[node name="grama3" type="Sprite3D" parent="grama"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.71496, 0.0230526, 0.000258088)
+billboard = 1
+texture = ExtResource("9_w1eiu")

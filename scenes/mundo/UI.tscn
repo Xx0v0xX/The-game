@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://c17qbk5gvd4bi"]
+
+[ext_resource type="Script" uid="uid://d2asx3i87tpeu" path="res://scripts/códigos .gd/UI.gd" id="1_86ilk"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_o4r8q"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_1g74s"]
+texture_filter = 1
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("1_86ilk")
+
+[node name="anchored full rect" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HUD" type="MarginContainer" parent="UI/anchored full rect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TopBar" type="HBoxContainer" parent="UI/anchored full rect/HUD"]
+layout_mode = 2
+
+[node name="HealthBar" type="TextureProgressBar" parent="UI/anchored full rect/HUD/TopBar"]
+material = SubResource("CanvasItemMaterial_o4r8q")
+layout_mode = 2
+texture_under = SubResource("CanvasTexture_1g74s")
+
+[node name="ManaBar" type="TextureProgressBar" parent="UI/anchored full rect/HUD/TopBar"]
+layout_mode = 2
+
+[node name="Hotbar" type="HBoxContainer" parent="UI/anchored full rect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Slot1" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot2" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot3" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot4" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot5" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot6" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot7" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot8" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
+
+[node name="Slot9" type="TextureRect" parent="UI/anchored full rect/Hotbar"]
+layout_mode = 2
